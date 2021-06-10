@@ -32,7 +32,7 @@ namespace WebApiCanTok.Controllers
                     new CommandWithCancTokenHandling(true), 
                     token);
             }
-            catch (OperationCanceledException ex)
+            catch (OperationCanceledException)
             {
                 _logger.LogDebug("Request has been cancelled");
                 return BadRequest("operation cancelled");
@@ -51,7 +51,7 @@ namespace WebApiCanTok.Controllers
                     new CommandWithCancTokenHandling(false), 
                     token);
             }
-            catch (OperationCanceledException ex)
+            catch (OperationCanceledException)
             {
                 _logger.LogDebug("Request has been cancelled");
                 return BadRequest("operation cancelled");
@@ -69,7 +69,7 @@ namespace WebApiCanTok.Controllers
                 await _mediator.Send(
                     new CommandWithCancTokenHandling(true));
             }
-            catch (OperationCanceledException ex)
+            catch (OperationCanceledException)
             {
                 _logger.LogDebug("Request has been cancelled");
                 return BadRequest("operation cancelled");
@@ -90,7 +90,7 @@ namespace WebApiCanTok.Controllers
                         passCancellationTokenToOtherMethods: true),
                     cancellationToken);
             }
-            catch (OperationCanceledException ex)
+            catch (OperationCanceledException)
             {
                 _logger.LogDebug("Request has been cancelled");
                 return BadRequest("operation cancelled");

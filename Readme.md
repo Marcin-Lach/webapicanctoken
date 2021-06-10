@@ -1,6 +1,6 @@
 # Fun with CancellationToken in WebApi
 
-There are 4 endpoints. Only one handles HTTP Request CancellationToken and in case of user aborting HTTP Request, breaks execution before persisting operation result.
+There are 4 endpoints. Two handles HTTP Request CancellationToken - in case of user aborting HTTP Request, breaks execution before persisting operation result.
 
 In Visual Studio - Run application in debug mode using local IIS. Watch console after visiting any of links below. Do not use Swagger to send and abort requests - Swagger does not abort requests. Open below links in web browser and press abort button.
 

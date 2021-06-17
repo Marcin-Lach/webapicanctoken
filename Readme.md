@@ -15,3 +15,6 @@ If you go to <https://localhost:44320/CancelToken/checktokenandpasstoothermethod
 ## Troubleshooting
 
 If you run this through dotnet cli, change ports in above links to match your setup (probably 5000 for HTTP and 5001 for HTTPS)
+
+## Further reading
+<https://docs.microsoft.com/en-us/dotnet/standard/threading/cancellation-in-managed-threads>
